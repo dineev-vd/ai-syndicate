@@ -1,0 +1,10 @@
+.projects-table {
+    display: flex;
+    justify-content: center;
+}
+
+.projects-table > * {
+    flex: 1 1 auto;
+    max-width: 1234px;
+    min-width: 600px;
+}

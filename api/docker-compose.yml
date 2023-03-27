@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+
+  db:
+    image: "postgres:alpine"
+    container_name: db
+    volumes:
+      - startups-data:/var/lib/postgresql/data
+    # ports:
+    #   - 5432:5432
+    environment:
+      POSTGRES_DB: syndicate
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+  backend:
+    build: .
+    container_name: backend
+
+    environment:
+      DB_SERVER: db
+      POSTGRES_DB: syndicate
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    # ports:
+    #   - 8085:8085
+    links:
+      - db
+    depends_on:
+      - db
+
+volumes:
+  startups-data:
+
+networks:
+  default:
+    name: ai_syndicate

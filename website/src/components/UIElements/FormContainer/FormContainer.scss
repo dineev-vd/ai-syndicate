@@ -1,0 +1,12 @@
+.form-container {
+    background-color: rgba(224, 224, 236, 0.6);
+    border-radius: 9px;
+    width: 1234px;
+    padding: 38px 68px;
+    flex-direction: row;
+    display: flex;
+}
+
+.form-container > * {
+    flex: 1 1 auto;
+}

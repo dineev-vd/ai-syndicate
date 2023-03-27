@@ -1,0 +1,11 @@
+services:
+  adminpanel:
+    build:
+      args:
+        - REACT_APP_API_ENDPOINT=https://aisyndicate.infostrategic.com/backend
+      context: ./
+      dockerfile: './Dockerfile'
+
+networks:
+  default:
+    name: ai_syndicate

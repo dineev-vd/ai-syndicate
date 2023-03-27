@@ -1,0 +1,24 @@
+stages:
+  - cleanup
+  - deploy
+
+cleanup:
+  stage: cleanup
+  variables:
+    GIT_STRATEGY: none
+  only:
+    refs:
+      - develop
+  script:
+    - docker system prune -a
+
+deploy:
+  stage: deploy
+  only:
+    refs:
+      - develop
+  script:
+    - docker-compose rm -sf
+    - docker-compose up -d --build
+  environment:
+    name: staging-proxy

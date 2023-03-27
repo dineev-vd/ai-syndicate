@@ -1,0 +1,10 @@
+FROM maven:3.6.3-jdk-11-slim
+WORKDIR /app
+COPY . .
+EXPOSE 8085
+RUN mvn install --no-transfer-progress -DskipTests=true
+ENV DB_SERVER=$DB_SERVER
+ENV POSTGRES_DB=$POSTGRES_DB
+ENV POSTGRES_USER=$POSTGRES_USER
+ENV POSTGRES_PASSWORD=$POSTGRES_PASSWORD
+ENTRYPOINT ["mvn", "spring-boot:run"]

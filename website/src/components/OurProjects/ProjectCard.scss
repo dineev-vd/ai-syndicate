@@ -1,0 +1,80 @@
+.project-card {
+    width: 340px;
+    height: 585px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card-image {
+    width: 100%;
+    height: 215px;
+    object-fit: cover;
+}
+
+.project-card-image-container {
+    position: relative;
+    width: 100%;
+    height: 215px;
+}
+
+.project-card-content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 12px;
+}
+
+.project-card-image-bottom {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.59);
+}
+
+.project-card-title {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.project-card-description {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.project-card-rows {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card-rows > * {
+    border-bottom: 1px dashed #73BBFF;
+    padding: 6px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-card-rows >*> :first-child {
+    font-size: 16px;
+}
+
+.project-card-rows >*>:not(:first-child) {
+    font-size: 18px;
+}
+
+.project-card-rows i {
+    color: #73BBFF;
+    font-size: 20px;
+    margin-right: 7px;
+}
+
+.project-card-buttons {
+    margin-top: 30px;
+    justify-self: flex-end;
+    display: flex;
+}
+
+.project-card-buttons button {
+    margin: 5px 2.5px;
+}

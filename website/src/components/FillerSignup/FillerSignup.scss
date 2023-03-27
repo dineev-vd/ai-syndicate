@@ -1,0 +1,47 @@
+.filler-signup {
+    background-image: url('./bg-signup.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    white-space: pre;
+    justify-content: center;
+    height: 200px;
+    
+    &-with-hand {
+        height: 350px;
+        justify-content: left;
+        padding-left: 200px;
+        margin-bottom: 70px;
+    }
+}
+
+.filler-signup-hand {
+    position: absolute;
+    background-image: url('./hand-signup.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 300px;
+    left: 112px;
+    height: 200px;
+    width: 500px;
+}
+
+.filler-signup-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filler-signup-title {
+    font-size: 50px;
+    font-weight: 700;
+    color: #E0FEFF;
+}
+
+.filler-signup-description {
+    margin-top: 10px;
+    font-size: 40px;
+    font-weight: 500;
+    color: #E0FEFF;
+}

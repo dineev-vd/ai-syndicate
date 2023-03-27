@@ -1,0 +1,55 @@
+.startup-description {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        margin-top: 0;
+        margin-bottom: 5px;
+        font-weight: 500;
+    }
+
+    &-upper {
+        display: flex;
+
+        &__info {
+            flex: 2 2 0;
+        }
+
+        &__socials {
+            flex: 1 1 0;
+        }
+    }
+
+    &-numbers {
+        margin: 10px 0;
+
+        &>* {
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        i {
+            color: var(--logo-secondary-color);
+            margin-right: 5px;
+        }
+    }
+
+    &-lower {
+        flex: 1 1 0;
+        display: flex;
+        flex-direction: column;
+
+        &__details {
+            margin: 10px 0;
+        }
+
+        &__buttons {
+            margin-top: auto;
+
+            &>:not(:first-child){
+                margin-left: 15px;
+            }
+        }
+    }
+}

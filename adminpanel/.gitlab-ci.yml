@@ -1,0 +1,24 @@
+stages:
+  - cleanup
+  - deploy
+
+cleanup:
+  stage: cleanup
+  variables:
+    GIT_STRATEGY: none
+  only:
+    refs:
+      - develop
+      - redux
+  script:
+    - docker system prune -a
+
+deploy:
+  stage: deploy
+  only:
+    refs:
+      - develop
+      - redux
+  script:
+    - docker-compose rm -sf
+    - docker-compose up -d --build

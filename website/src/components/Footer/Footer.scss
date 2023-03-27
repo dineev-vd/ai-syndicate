@@ -1,0 +1,86 @@
+.footer {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.74);
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.footer::before {
+    background:  url('./footer-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.footer-content {
+    width: var(--header-content-width)
+}
+
+.footer-big-text {
+    margin-top: 11px;
+}
+
+.footer-under-text {
+    padding-top: 10px;
+    padding-bottom: 14px;
+    border-top: 1px white solid;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-under-text>:not(:first-child) {
+    margin-left: 10px;
+}
+
+/* Columns, Blocks in columns, Rows in blocks */
+.footer-tabs, .footer-tabs>*, .footer-tabs>*>* {
+    display: flex;
+}
+
+/* Blocks must have equal width */
+.footer-tabs>* {
+    flex-direction: column;
+    flex: 1 1 0;
+}
+
+/* Rows of blocks align to left */
+.footer-tabs>*>* {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 18px;
+}
+
+/* Rows */
+.footer-tabs>*>*>:not(:first-child) {
+    margin-bottom: 12px;
+}
+
+/* Headings of blocks */
+.footer-tabs>*>*>:first-child {
+    font-weight: 700;
+    font-size: 20px;
+    border-bottom: 1px white solid;
+    margin-bottom: 13px;
+    margin-top: 53px;
+}
+
+.footer-socials {
+    font-size: 14px;
+}
+
+.footer-socials>:not(:first-child) {
+    display: flex;
+}
+
+.footer-socials>:not(:first-child)>:not(:first-child) {
+    margin-left: 5px;
+}

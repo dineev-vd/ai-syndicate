@@ -1,0 +1,9 @@
+apis/InvestorControllerApi.ts
+apis/StartupControllerApi.ts
+apis/index.ts
+index.ts
+models/InvestorDto.ts
+models/InvestorRegistrationDto.ts
+models/StartupDto.ts
+models/index.ts
+runtime.ts

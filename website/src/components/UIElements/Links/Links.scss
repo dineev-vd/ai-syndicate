@@ -1,0 +1,33 @@
+.links {
+    display: flex;
+    font-size: 20px;
+    border-bottom: 2px solid #73BBFF;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    white-space: nowrap;
+
+    &_active {
+        color: #73BBFF;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            border-bottom: 10px #73BBFF solid;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            pointer-events: none;
+        }
+    }
+
+    &>:not(:first-child) {
+        margin-left: 20px;
+    }
+
+    &>* {
+        position: relative;
+        flex: 1 1;
+        display: flex;
+        justify-content: center;
+    }
+}

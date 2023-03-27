@@ -1,0 +1,104 @@
+.investor-dashboard-page {
+    display: flex;
+    flex-direction: column;
+
+    &__dashboard-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 60px 20px;
+    }
+}
+
+.investor-dashboard {
+    max-width: 1500px;
+    // max-height: 750px;
+    display: flex;
+    flex: 1 1 auto;
+
+    &>* {
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+        margin: 7.5px;
+        border-radius: 5px;
+    }
+
+    &-content {
+        background: #EDECF4;
+        padding: 20px 40px;
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        min-width: 600px;
+
+        &__links {
+            display: flex;
+            font-size: 20px;
+            border-bottom: 2px solid #73BBFF;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+
+            &_active {
+                color: #73BBFF;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    bottom: -20px;
+                    border-bottom: 10px #73BBFF solid;
+                    border-left: 10px solid transparent;
+                    border-right: 10px solid transparent;
+                    pointer-events: none;
+                }
+            }
+
+            &>* {
+                position: relative;
+                flex: 1 1;
+                display: flex;
+                justify-content: center;
+            }
+
+            // &>:first-child {
+            //     justify-content: left;
+            // }
+
+            // &>:last-child {
+            //     justify-content: right;
+            // }
+
+        }
+    }
+
+
+    &-statistics {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+
+        &__title {
+            border-bottom: 2px solid #73BBFF;
+            font-size: 20px;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            width: 100%;
+            text-align: center;
+            color: #001454;
+        }
+
+        &__rows {
+            display: flex;
+            flex-direction: column;
+            &>* {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &-graph {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

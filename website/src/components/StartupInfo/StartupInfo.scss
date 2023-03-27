@@ -1,0 +1,37 @@
+.startup-info {
+    display: flex;
+    flex-direction: column;
+
+    &-description {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 0;
+
+        &>* {
+            flex: 1 1 auto;
+        }
+    }
+
+    &-content {
+        display: flex;
+        align-items: stretch;
+
+        &>:not(:first-child) {
+            margin-left: 30px;
+        }
+
+    }
+
+    &-tabs {
+        margin-top: 50px;
+
+        &__links {
+            display: flex;
+        }
+    }
+
+    &-image-block {
+        flex: 1.2 1.2 0;
+        display: flex;
+    }
+}

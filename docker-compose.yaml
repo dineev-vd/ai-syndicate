@@ -1,0 +1,47 @@
+services:
+  frontend:
+    env_file: prod.env
+    build: 
+      context: ./website
+      dockerfile: './Dockerfile'
+    networks:
+      - main
+  backend:
+    env_file: prod.env
+    build:
+      context: ./api
+      dockerfile: './Dockerfile'
+    networks:
+      - main
+  adminpanel:
+    env_file: prod.env
+    build:
+      context: ./adminpanel
+      dockerfile: './Dockerfile'
+    networks:
+      - main
+  db:
+   image: postgres
+   env_file: prod.env
+   networks:
+     - main
+   ports:
+     - 5432:5432
+  # pgadmin:
+  #   env_file: dev.env
+  #   image: dpage/pgadmin4
+  #   networks:
+  #     - main
+  #   ports:
+  #     - 3001:80
+  nginx:
+    image: nginx:alpine
+    networks:
+      - main
+    ports:
+      - 8085:80
+    volumes:
+      - "./proxy/nginx.conf:/etc/nginx/nginx.conf"
+
+networks:
+  main:

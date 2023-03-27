@@ -1,0 +1,56 @@
+.startups-ideas {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px;
+    max-width: 1234px;
+    flex: 1 1 auto;
+
+    &-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    &-links {
+        display: flex;
+        justify-content: center;
+
+        &>* {
+            max-width: 700px;
+            flex: 1 1 auto;
+        }
+    }
+
+    &-description {
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    &-category {
+        display: flex;
+
+        &>:not(:first-child) {
+            margin-left: 75px;
+        }
+
+        &>* {
+            flex: 1 1 auto;
+            display: flex;
+            margin: 15px 0 15px 0;
+            align-items: center;
+        }
+
+        select {
+            flex: 1 1 auto;
+            margin-left: 30px;
+            border: 1px lightgray solid;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    }
+
+    &-paginator {
+        margin: 10px 0;
+    }
+}

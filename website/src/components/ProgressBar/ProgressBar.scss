@@ -1,0 +1,25 @@
+.progress-bar {
+    display: flex;
+    flex-direction: column;
+
+    &__lower, &__upper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__bar {
+        position: relative;
+        margin: 5px 0;
+        height: 0.8em;
+        background-color: lightgrey;
+        border-radius: 0.8em;
+    }
+
+    &__progress {
+        position: absolute;
+        height: 100%;
+        width: 50%;
+        border-radius: inherit;
+        background-color: #54C172;
+    }
+}
